@@ -17,7 +17,7 @@ Opsi ekstra (MACVLAN, IPv6 NAT, USER_NS) hanya mengubah defconfig dan tidak berh
 1. Buat repo GitHub publik baru (nama bebas), taruh **ketiga file ini di root repo**.
 2. Jalankan workflow `kernel-a12-5-10` (atau `kernel-custom`) dan isi:
    - aktifkan opsi custom external modules
-   - `custom_external_modules`: `https://github.com/<username>/<nama-repo>;after_patch`
+   - `custom_external_modules`: `https://github.com/zenxvolt/abk-container-kconfig;after_patch`
 3. Di log harus muncul `cgroup-limits: patch applied`, `added CONFIG_CFS_BANDWIDTH`, `added CONFIG_CGROUP_PIDS`.
    Tiap opsi ekstra juga tercatat satu baris. Bunyinya tergantung isi `gki_defconfig` kernel:
    `added`, `switched on`, `changed ... to =y`, atau `already enabled`. Log diakhiri `cgroup-limits: done`.
